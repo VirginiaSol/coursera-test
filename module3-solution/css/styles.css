@@ -1,0 +1,95 @@
+body {
+    font-size: 16px;
+    color: c96508;
+    background-color: #f09b24;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: bold;
+  }
+  #header-nav {
+    background-color: #c96508;
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 0;
+  }
+  .navbar-brand {
+    padding-top: 35px;
+    height: 100px;
+  }
+  
+  .navbar-brand h1 { /* Restaurant name */
+    font-family: 'Lora', serif;
+    color: #fff;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: .75;
+  }
+  .navbar-brand a:hover, .navbar-brand a:focus {
+    text-decoration: none;
+  }
+
+
+  .navbar-header button.navbar-toggle, .navbar-header .icon-bar{
+    border: 1px solid #e6de84;
+  }
+  .navbar-header button.navbar-toggle {
+    clear: both;
+    margin-top: -50px;
+  }
+  #main-content {
+    margin-top: 0;
+    
+  }
+  #home-tiles {
+    background-color: #e0db9f;
+  }
+
+  #menu-categories-title {
+    color: #fff;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+  }
+  .category-tile h3 {
+    font-weight: bold;
+  }
+  /********** Extra small devices only **********/
+@media (max-width: 767px) {
+    /* Header */
+    .navbar-brand {
+      padding-top: 10px;
+      height: 80px;
+    }
+    .navbar-brand h1 { /* Restaurant name */
+      padding-top: 20px;
+      font-size: 4vw; /* 1vw = 1% of viewport width */
+    }
+    #collapsable-nav a { /* Collapsed nav menu text */
+        font-size: 1.2em;
+      }
+      
+      #collapsable-nav a span { /* Collapsed nav menu glyph */
+        font-size: 1em;
+        margin-right: 5px;
+      }
+      #nav-list{
+        background-color: #fff;
+      }
+      #nav-list a {
+        color: #123261;
+        text-align: center;
+      }
+      #nav-list a:hover {
+        background: #E7E7E7;
+      }
+      #nav-list {
+        border: 1px solid #123261;
+        margin-bottom: 0;
+      }
+      #nav-list li{
+        border: 1px solid #123261;
+      }
+      #nav-list a span {
+        font-size: 1.8em;
+      }
+}
