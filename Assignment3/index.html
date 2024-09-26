@@ -1,0 +1,23 @@
+<!<!DOCTYPE html>
+<html ng-app='NarrowItDownApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Menu Search</title>
+  </head>
+  <body>
+    <h1>Menu Search</h1>
+
+    <div  id="list" ng-controller='NarrowItDownController as list'>
+      <input type="text" ng-model="list.searchTerm" placeholder="item search">
+      <button ng-click="list.getMatchedMenuItems();">Get description</button>
+
+      <!-- Notice how we correctly pass the on-remove event -->
+      <found-items items="list.items" title="{{list.title}}"
+      on-remove="list.removeItem(index)"></found-items>
+    </div>
+
+  </body>
+</html>
