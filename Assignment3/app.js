@@ -45,7 +45,7 @@
           var dataOut = response.data;
           angular.forEach(dataOut, function (category) {
             angular.forEach(category.menu_items, function (item) {
-              if (item.description && item.description.toLowerCase().indexOf(list.searchTerm.trim()) !== -1) {
+              if (item.description && item.description.toLowerCase().indexOf(list.searchTerm.toLowerCase().trim()) !== -1) {
                 var itemElement = {
                   name: item.name,
                   short_name: item.short_name,
