@@ -1,0 +1,33 @@
+body {
+  font-size: 1.2em;
+}
+input {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+button {
+  font-size: 24px;
+  color: yellow;
+}
+
+.ng-touched.ng-valid {
+  border: 2px green solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 2px red solid;
+}
+
+#info {
+  margin-top: 20px;
+  margin-left: 50px;
+}
+button:enabled {
+  background-color: #4CAF50;
+  color: white;
+} /* Style for disabled button */
+button:disabled {
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+}

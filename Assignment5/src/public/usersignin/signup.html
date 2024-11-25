@@ -1,0 +1,71 @@
+<!-- <div ng-controller="SignUpController as signUpCtrl"> -->
+<div class="container">
+    <h3>Sign Up</h3>
+    <form name='regForm' novalidate>
+        <input type="text" name="firstName" placeholder="Pick a username" ng-model="signUpCtrl.firstName"
+        required
+        minlength="4"
+        ng-maxlength="10">
+        {{ signUpCtrl.firstName }}
+        <span
+            ng-if="(regForm.firstName.$error.minlength || regForm.firstName.$error.required) && regForm.firstName.$touched">
+            Username must be at least 4 characters long
+          </span>
+          <span ng-if="regForm.firstName.$error.maxlength && regForm.firstName.$touched">
+            Username must not be longer than 10 characters
+          </span>
+        <br>
+        <input type="text" name="lastName" ng-model="signUpCtrl.lastName" placeholder="Last name"
+        required
+        minlength="4"
+        ng-maxlength="10">
+        {{ signUpCtrl.lastName }}
+        <span
+          ng-if="(regForm.lastName.$error.minlength || regForm.lastName.$error.required) && regForm.lastName.$touched">
+          Lastname must be at least 4 characters long
+        </span>
+        <span ng-if="regForm.lastName.$error.maxlength && regForm.lastName.$touched">
+          Lastname must not be longer than 10 characters
+        </span>
+        <br>
+        <input type="email" name="email" ng-model="signUpCtrl.email" placeholder="Email" required>
+        {{ signUpCtrl.user.email }}
+        <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+            Must be a valid email address: handle@domain format
+        </span>
+        <br>
+
+        <input type="text" name="phone" placeholder="Phone ###-###-####"
+          ng-model="signUpCtrl.phone"
+		  required
+          pattern="(\d{3})-(\d{3})-(\d{4})">
+          <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+            Phone must be in the format ###-###-####.
+          </span>
+          <br>
+          <input type="text" name="favoritMenu" placeholder="Favorit menu (short_name)"
+            ng-model="signUpCtrl.favoritMenu"
+            required
+            minlength="2"
+            ng-maxlength="4">
+            {{ signUpCtrl.favoritMenu }}
+          <span
+            ng-if="(regForm.favoritMenu.$error.minlength || regForm.favoritMenu.$error.required) && regForm.favoritMenu.$touched">
+                Favoritmenu (short_name) must be at least 2 characters long
+          </span>
+          <span ng-if="regForm.favoritMenu.$error.maxlength && regForm.favoritMenu.$touched">
+                Favoritmenu (short_name) must not be longer than 4 characters
+          </span>
+          <br>
+          <span ng-if="regForm.favoritMenu.$touched">
+              {{signUpCtrl.message}}
+          </span>
+            <br>
+            <button ng-disabled="regForm.$invalid" ng-click="signUpCtrl.submit()">
+              Submit</button>
+        <!-- <button type="submit">Submit</button> -->
+    </form>
+    <div id="info" ng-if="signUpCtrl.completed">
+        Your information has been saved
+      </div>
+</div>
